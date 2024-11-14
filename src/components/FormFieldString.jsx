@@ -14,7 +14,7 @@ function FormFieldString({
 
     return (
         <>
-            <label htmlFor={id}>{children}</label>
+            <label className="label-text" htmlFor={id}>{children}</label>
             <input
                 id={id}
                 value={value}

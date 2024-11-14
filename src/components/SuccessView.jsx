@@ -7,12 +7,12 @@ function SuccessView({ setSuccess }) {
     };
 
     return (
-        <>
+        <div className="return-view">
             <h1>Form submitted successfully. :&#41;</h1>
             <ReturnButton onClickEvent={handleOnClick}>
                 Return to Form!
             </ReturnButton>
-        </>
+        </div>
     );
 }
 

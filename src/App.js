@@ -1,25 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import Form from './components/Form';
+import SuccessView from './components/SuccessView';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [success, setSuccess] = useState(false);
+
+    return (
+        <div className="App">
+            {success ? (
+                <SuccessView setSuccess={setSuccess} />
+            ) : (
+                <Form setSuccess={setSuccess} />
+            )}
+        </div>
+    );
 }
 
 export default App;
